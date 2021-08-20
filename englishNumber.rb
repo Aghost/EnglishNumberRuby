@@ -16,14 +16,14 @@ def englishNumber number
   numStr = ""
   left_to_write = number
 
-  # bazillions
+  # trillions
   # --------------------------------------------------
   write = left_to_write / 1000000000000
   left_to_write  = left_to_write  - write*1000000000000
 
   if write > 0
-    bazillions = englishNumber write
-    numStr = numStr + bazillions + ' bazillion '
+    trillions = englishNumber write
+    numStr = numStr + trillions + ' trillion '
   end
   # billions
   # --------------------------------------------------
@@ -87,7 +87,7 @@ def englishNumber number
   # ones
   # --------------------------------------------------
   write = left_to_write
-  left_to_write  = 0
+  left_to_write = 0
 
   if write > 0
     numStr = numStr + ONESPLACE[write-1]
